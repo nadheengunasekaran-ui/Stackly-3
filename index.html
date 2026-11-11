@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Motors | Luxury Automobile Showroom</title>
+  <meta name="description" content="Stackly Motors is an elite luxury automobile showroom. Discover iconic performance cars, bespoke acquisitions, and unparalleled driving experiences.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       1. NAVBAR (Clean white navbar, sticky, exact reference layout)
+       ======================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <!-- Brand Wordmark on the left -->
+      <a href="#home" class="logo" aria-label="Stackly Motors home">
+        <img src="images/logo.png" class="logo-img" alt="Stackly Motors logo" width="346" height="100">
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navPanel">
+        <span></span><span></span><span></span>
+      </button>
+<!-- Navigation links and auth buttons on the right -->
+      <div class="nav-panel" id="navPanel">
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#intro" class="nav-link">About Us</a></li>
+            <li><a href="#categories" class="nav-link">Cars</a></li>
+            <li><a href="#promotional" class="nav-link">Services</a></li>
+            <li><a href="#footer" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-auth">
+          <a href="404.html" class="btn btn-ghost">Login</a>
+          <a href="404.html" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </div>
+      
+  </header>
+
+  <main>
+
+    <!-- ========================================================
+         2. HERO BANNER (Full-width background image slider, centered overlay)
+         ======================================================== -->
+    <section class="hero" id="home" aria-label="Hero carousel">
+      <!-- Slider Track & Slides -->
+      <div class="hero-slider" id="heroSlider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" data-index="0">
+          <img src="images/hero-luxury.jpg" alt="Stackly Motors flagship luxury grand tourer on coastal open highway" fetchpriority="high" width="1920" height="1280">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide" data-index="1">
+          <img src="images/car-porsche.jpg" alt="Porsche 911 Turbo S performance supercar" loading="lazy" width="1100" height="774">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide" data-index="2">
+          <img src="images/car-mercedes.jpg" alt="Mercedes-AMG GT 63 S luxury 4-door coupe" loading="lazy" width="1100" height="734">
+        </div>
+        <!-- Slide 4 -->
+        <div class="hero-slide" data-index="3">
+          <img src="images/car-ferrari.jpg" alt="Ferrari 488 GTB twin-turbo sports car" loading="lazy" width="1100" height="733">
+        </div>
+      </div>
+
+      <!-- Luxury Overlays -->
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-frame" aria-hidden="true"></div>
+
+      <!-- Centered Text Overlay -->
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">Exclusive Automotive Atelier</p>
+        <h1 class="reveal">
+          Discover Luxury.<br>
+          <em>Experience Performance.</em>
+        </h1>
+        <p class="hero-sub reveal">Find the perfect car that matches your lifestyle.</p>
+        <div class="hero-actions reveal">
+          <a href="#categories" class="btn btn-gold">Explore Cars <span aria-hidden="true">→</span></a>
+          <a href="404.html" class="btn btn-outline">Book a Test Drive</a>
+        </div>
+      </div>
+
+      <!-- Slider Controls (Arrows) -->
+      <div class="hero-controls" aria-label="Slider navigation">
+        <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="slider-arrow next" id="sliderNext" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Slider Pagination Indicators -->
+      <div class="hero-pagination" id="sliderDots" role="tablist" aria-label="Slide dots">
+        <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-slide="0"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3" data-slide="2"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 4" data-slide="3"></button>
+      </div>
+
+      <!-- Scroll cue -->
+      <a href="#intro" class="scroll-cue" aria-label="Scroll to learn more">
+        <span class="scroll-line"></span>
+        <span>Scroll to explore</span>
+      </a>
+    </section>
+
+    <!-- ========================================================
+         3. INTRODUCTION SECTION (Two-column layout, left text, right showroom image)
+         ======================================================== -->
+    <section class="intro-section" id="intro" aria-labelledby="introHeading">
+      <div class="container intro-grid">
+        <!-- Left Side: Copy and Highlights -->
+        <div class="intro-copy">
+          <p class="section-tag reveal">About Stackly Motors</p>
+          <h2 id="introHeading" class="reveal">Find Your Perfect <em>Drive</em></h2>
+          <p class="intro-lead reveal">
+            At Stackly Motors, we curate the world's most prestigious luxury and high-performance automobiles. Each vehicle in our private collection is chosen for its uncompromised character, certified provenance, and remarkable engineering.
+          </p>
+          <p class="intro-desc reveal">
+            From handcrafted transcontinental grand tourers to race-bred hypercars and cutting-edge electric sedans, we pair discerning automotive connoisseurs with vehicles that transcend ordinary transportation. Experience white-glove advisory, private showroom viewings, and bespoke ownership support for every mile ahead.
+          </p>
+
+          <div class="intro-highlights reveal">
+            <div class="highlight-item">
+              <span class="highlight-num">200+</span>
+              <span class="highlight-text">Point Certified Inspection</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">15+</span>
+              <span class="highlight-text">Years of Automotive Mastery</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">100%</span>
+              <span class="highlight-text">Verified Single-Owner Provenance</span>
+            </div>
+          </div>
+
+          <div class="intro-cta reveal">
+            <a href="#categories" class="btn btn-gold">
+              Explore More <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Large Showroom Image -->
+        <div class="intro-visual reveal">
+          <div class="intro-img-frame">
+            <img src="images/about-showroom.jpg" alt="Stackly Motors architectural luxury car showroom interior" loading="lazy" width="1200" height="801">
+            <div class="visual-accent-border" aria-hidden="true"></div>
+            <div class="intro-badge">
+              <strong>Private Atelier</strong>
+              <span>London · Dubai · Geneva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. CAR CATEGORIES SECTION (Horizontal row: Luxury, Sports, SUVs, Sedans, Electric)
+         ======================================================== -->
+    <section class="categories-section" id="categories" aria-labelledby="catHeading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Browse by Vehicle Class</p>
+          <h2 id="catHeading">Explore Cars for <em>Every Journey</em></h2>
+          <p class="section-sub">Select a category engineered to elevate every destination with breathtaking refinement and power.</p>
+        </div>
+
+        <div class="category-cards-wrapper">
+          <!-- 1. Luxury Cars -->
+          <article class="cat-card reveal">
+            <div class="cat-img-box">
+              <img src="images/car-mercedes.jpg" alt="Luxury Cars - Mercedes-AMG GT 63 S" loading="lazy" width="1100" height="734">
+              <span class="cat-badge">12 Models</span>
+            </div>
+            <div class="cat-content">
+              <h3>Luxury Cars</h3>
+              <p>Handcrafted opulence, whisper-quiet cabins, and effortless continental touring.</p>
+              <a href="#best-sellers" class="cat-link" data-filter="Mercedes-Benz">
+                <span>Explore</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Sports Cars -->
+          <article class="cat-card reveal">
+            <div class="cat-img-box">
+              <img src="images/car-porsche.jpg" alt="Sports Cars - Porsche 911 Turbo S" loading="lazy" width="1100" height="774">
+              <span class="cat-badge">8 Models</span>
+            </div>
+            <div class="cat-content">
+              <h3>Sports Cars</h3>
+              <p>Track-honed aerodynamics, razor-sharp steering, and pure adrenaline on tap.</p>
+              <a href="#best-sellers" class="cat-link" data-filter="Porsche">
+                <span>Explore</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. SUVs -->
+          <article class="cat-card reveal">
+            <div class="cat-img-box">
+              <img src="images/car-suv.jpg" alt="SUVs - High-Performance Luxury All-Terrain SUV" loading="lazy" width="1100" height="619">
+              <span class="cat-badge">10 Models</span>
+            </div>
+            <div class="cat-content">
+              <h3>SUVs</h3>
+              <p>Commanding road presence, all-terrain supremacy, and palatial interior comfort.</p>
+              <a href="#best-sellers" class="cat-link" data-filter="Lamborghini">
+                <span>Explore</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Sedans -->
+          <article class="cat-card reveal">
+            <div class="cat-img-box">
+              <img src="images/car-bmw.jpg" alt="Sedans - BMW M8 Competition Gran Coupe" loading="lazy" width="1100" height="733">
+              <span class="cat-badge">14 Models</span>
+            </div>
+            <div class="cat-content">
+              <h3>Sedans</h3>
+              <p>Executive poise, sculpted silhouettes, and dynamic long-distance grand capability.</p>
+              <a href="#best-sellers" class="cat-link" data-filter="BMW">
+                <span>Explore</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5. Electric Cars -->
+          <article class="cat-card reveal">
+            <div class="cat-img-box">
+              <img src="images/car-electric.jpg" alt="Electric Cars - High-Performance Liquid Silver Electric Hyper-Car" loading="lazy" width="1100" height="619">
+              <span class="cat-badge">6 Models</span>
+            </div>
+            <div class="cat-content">
+              <h3>Electric Cars</h3>
+              <p>Instantaneous torque vectoring, visionary aerodynamics, and zero-emission superiority.</p>
+              <a href="#best-sellers" class="cat-link" data-filter="Audi">
+                <span>Explore</span> <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. PROMOTIONAL BANNER (Full-width dark section, car image on one side, text on other)
+         ======================================================== -->
+    <section class="promo-section" id="promotional" aria-labelledby="promoHeading">
+      <div class="promo-bg-glow" aria-hidden="true"></div>
+      <div class="container promo-grid">
+        <!-- Visual Side -->
+        <div class="promo-media reveal">
+          <div class="promo-img-wrapper">
+            <img src="images/car-ferrari.jpg" alt="Ferrari 488 GTB in dramatic studio lighting" loading="lazy" width="1100" height="733">
+            <div class="promo-media-frame" aria-hidden="true"></div>
+            <div class="promo-badge">
+              <span class="tag">Exclusive Reserve</span>
+              <strong>1 of 500</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy Side -->
+        <div class="promo-copy reveal">
+          <p class="section-tag">Curated Collector Allocations</p>
+          <h2 id="promoHeading">Every Drive.<br><em>A New Experience.</em></h2>
+          <p class="promo-lead">
+            Step beyond conventional motoring with our bespoke collector acquisitions and limited-edition private allocations. Stackly Motors offers discreet access to rare production models, track-focused homologation specials, and tailored commissions.
+          </p>
+
+          <ul class="promo-features">
+            <li>
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              </div>
+              <div>
+                <strong>Confidential Atelier Sourcing</strong>
+                <p>Private allocations directly from certified global archives and factory vaults.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <strong>White-Glove Enclosed Delivery</strong>
+                <p>Secure climate-controlled transport and private handover anywhere worldwide.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <strong>VIP Circuit &amp; Owner Track Days</strong>
+                <p>Exclusive access to international test circuits and marque manufacturer galas.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="promo-cta">
+            <a href="404.html" class="btn btn-gold">
+              Discover More <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. BEST SELLING CARS (Grid of premium car product cards with details)
+         ======================================================== -->
+    <section class="bestsellers-section" id="best-sellers" aria-labelledby="bestsellerHeading">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Flagship Inventory</p>
+          <h2 id="bestsellerHeading">Our Best Selling <em>Cars</em></h2>
+          <p class="section-sub">A curated selection of the world's most sought-after performance and luxury automobiles ready for immediate acquisition.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs reveal" role="tablist" aria-label="Filter best selling cars">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All Marques</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Porsche">Porsche</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Mercedes-Benz">Mercedes-Benz</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="BMW">BMW</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Audi">Audi</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Lamborghini">Lamborghini</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="Ferrari">Ferrari</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- 1. Porsche 911 Turbo S -->
+          <article class="car-card reveal" data-brand="Porsche" data-model="911 Turbo S" data-year="2024" data-price="$231,000" data-hp="650 HP" data-accel="2.6s (0–100)" data-top="330 km/h" data-img="images/car-porsche.jpg">
+            <div class="car-img">
+              <img src="images/car-porsche.jpg" alt="Porsche 911 Turbo S" loading="lazy" width="1100" height="774">
+              <span class="badge">Signature</span>
+              <span class="year-pill">2024</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">Porsche</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">911 Turbo S</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>650</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>2.6s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>330</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$231,000</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Mercedes-AMG GT 63 S -->
+          <article class="car-card reveal" data-brand="Mercedes-Benz" data-model="AMG GT 63 S" data-year="2024" data-price="$187,500" data-hp="630 HP" data-accel="3.2s (0–100)" data-top="315 km/h" data-img="images/car-mercedes.jpg">
+            <div class="car-img">
+              <img src="images/car-mercedes.jpg" alt="Mercedes-AMG GT 63 S" loading="lazy" width="1100" height="734">
+              <span class="badge">New Arrival</span>
+              <span class="year-pill">2024</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">Mercedes-Benz</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">AMG GT 63 S 4-Door</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>630</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>3.2s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>315</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$187,500</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. BMW M8 Competition -->
+          <article class="car-card reveal" data-brand="BMW" data-model="M8 Competition Coupe" data-year="2024" data-price="$146,000" data-hp="625 HP" data-accel="3.2s (0–100)" data-top="305 km/h" data-img="images/car-bmw.jpg">
+            <div class="car-img">
+              <img src="images/car-bmw.jpg" alt="BMW M8 Competition Coupe" loading="lazy" width="1100" height="733">
+              <span class="badge">Performance</span>
+              <span class="year-pill">2024</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">BMW</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">M8 Competition Coupe</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>625</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>3.2s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>305</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$146,000</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Audi R8 V10 Performance -->
+          <article class="car-card reveal" data-brand="Audi" data-model="R8 V10 Performance" data-year="2024" data-price="$221,000" data-hp="620 HP" data-accel="3.1s (0–100)" data-top="331 km/h" data-img="images/car-audi.jpg">
+            <div class="car-img">
+              <img src="images/car-audi.jpg" alt="Audi R8 V10 Performance" loading="lazy" width="1100" height="734">
+              <span class="badge">V10 Naturally Aspirated</span>
+              <span class="year-pill">2024</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">Audi</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">R8 V10 Performance</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>620</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>3.1s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>331</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$221,000</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Lamborghini Huracán EVO -->
+          <article class="car-card reveal" data-brand="Lamborghini" data-model="Huracán EVO V10" data-year="2024" data-price="$268,000" data-hp="640 HP" data-accel="2.9s (0–100)" data-top="325 km/h" data-img="images/car-lamborghini.jpg">
+            <div class="car-img">
+              <img src="images/car-lamborghini.jpg" alt="Lamborghini Huracán EVO V10" loading="lazy" width="1100" height="825">
+              <span class="badge">Supercar</span>
+              <span class="year-pill">2024</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">Lamborghini</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">Huracán EVO V10</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>640</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>2.9s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>325</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$268,000</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Ferrari 488 GTB -->
+          <article class="car-card reveal" data-brand="Ferrari" data-model="488 GTB Twin-Turbo" data-year="2023" data-price="$285,000" data-hp="670 HP" data-accel="3.0s (0–100)" data-top="330 km/h" data-img="images/car-ferrari.jpg">
+            <div class="car-img">
+              <img src="images/car-ferrari.jpg" alt="Ferrari 488 GTB Twin-Turbo" loading="lazy" width="1100" height="733">
+              <span class="badge">Collector Icon</span>
+              <span class="year-pill">2023</span>
+            </div>
+            <div class="car-body">
+              <div class="car-meta">
+                <span class="car-brand">Ferrari</span>
+                <span class="stock-status">Available in Showroom</span>
+              </div>
+              <h3 class="car-title">488 GTB Twin-Turbo</h3>
+              <div class="car-specs-row">
+                <div class="spec-cell"><strong>670</strong><span>Horsepower</span></div>
+                <div class="spec-cell"><strong>3.0s</strong><span>0–100 km/h</span></div>
+                <div class="spec-cell"><strong>330</strong><span>Top km/h</span></div>
+              </div>
+              <div class="car-foot">
+                <div class="price-wrap">
+                  <span class="price-label">Starting from</span>
+                  <strong class="price-val">$285,000</strong>
+                </div>
+                <a href="404.html" class="btn btn-outline-sm">View Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. DESIGNED FOR EVERY JOURNEY (Large lifestyle image, 4 pillars: comfort, safety, tech, perf, and collection cards below)
+         ======================================================== -->
+    <section class="journey-section" id="designed" aria-labelledby="journeyHeading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head reveal">
+          <p class="section-tag">Engineering &amp; Lifestyle</p>
+          <h2 id="journeyHeading">Designed for <em>Every Journey</em></h2>
+          <p class="section-sub">Where extraordinary human craftsmanship converges with race-bred dynamics to transform every journey into an unforgettable occasion.</p>
+        </div>
+
+        <!-- Large Automotive Lifestyle Feature -->
+        <div class="journey-hero-box reveal">
+          <div class="journey-media">
+            <img src="images/lifestyle-journey.jpg" alt="Luxury sports grand tourer parked outside modern glass villa at coastal twilight" loading="lazy" width="1600" height="900">
+            <div class="journey-overlay" aria-hidden="true"></div>
+            <div class="journey-floating-quote">
+              <p>“True luxury is not merely the speed you reach, but how extraordinary every second feels along the way.”</p>
+              <span>Stackly Atelier Philosophy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Four Supporting Pillars (Comfort, Safety, Technology, Performance) -->
+        <div class="pillars-grid">
+          <!-- 1. Comfort -->
+          <article class="pillar-card reveal">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="3" y="11" width="18" height="10" rx="3"/><circle cx="12" cy="16" r="1.5"/></svg>
+            </div>
+            <span class="pillar-num">01</span>
+            <h3>Unrivaled Comfort</h3>
+            <p>Hand-stitched semi-aniline leathers, adaptive ergonomic massaging seating, and acoustic dual-pane glazing create an undisturbed personal sanctuary at any speed.</p>
+          </article>
+
+          <!-- 2. Safety -->
+          <article class="pillar-card reveal">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="pillar-num">02</span>
+            <h3>Intelligent Safety</h3>
+            <p>Predictive 360-degree radar suites, carbon-ceramic matrix braking, and proactive structural crash safety shield you with military-grade precision.</p>
+          </article>
+
+          <!-- 3. Technology -->
+          <article class="pillar-card reveal">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="pillar-num">03</span>
+            <h3>Visionary Technology</h3>
+            <p>Curved high-resolution OLED cockpits, live telemetry, augmented reality head-up projections, and bespoke spatial audio engineered for acoustic purists.</p>
+          </article>
+
+          <!-- 4. Performance -->
+          <article class="pillar-card reveal">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m14 10-4 4"/><path d="m10 10 4 4"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <span class="pillar-num">04</span>
+            <h3>Pure Performance</h3>
+            <p>Twin-turbocharged combustion and multi-motor electric architectures delivering sub-3-second acceleration with razor-sharp torque vectoring dynamics.</p>
+          </article>
+        </div>
+
+        <!-- Additional Vehicle Collection Cards Below -->
+        <div class="collection-subheading reveal">
+          <h3>Curated Vehicle Collections</h3>
+          <p>Explore specialized automotive suites tailored for discerning lifestyle pursuits.</p>
+        </div>
+
+        <div class="collection-cards-grid">
+          <!-- Collection 1: Grand Touring -->
+          <article class="collection-card reveal">
+            <div class="col-img">
+              <img src="images/hero-luxury.jpg" alt="Grand Touring Collection" loading="lazy" width="800" height="533">
+              <span class="col-tag">Grand Touring Series</span>
+            </div>
+            <div class="col-body">
+              <h4>Transcontinental GT Series</h4>
+              <p>Effortless transcontinental range, expansive bespoke luggage suites, and supreme high-speed stability.</p>
+              <div class="col-foot">
+                <span>4 Editions Available</span>
+                <a href="#best-sellers" class="link-arrow">View Collection <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Collection 2: Track & Circuit -->
+          <article class="collection-card reveal">
+            <div class="col-img">
+              <img src="images/car-porsche.jpg" alt="Track & Circuit Performance Series" loading="lazy" width="800" height="563">
+              <span class="col-tag">Track Performance</span>
+            </div>
+            <div class="col-body">
+              <h4>Motorsport Track Icons</h4>
+              <p>Active aerodynamic splitters, carbon monocoque rigidity, and competition-calibrated telemetrics.</p>
+              <div class="col-foot">
+                <span>5 Editions Available</span>
+                <a href="#best-sellers" class="link-arrow">View Collection <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Collection 3: Executive Prestige -->
+          <article class="collection-card reveal">
+            <div class="col-img">
+              <img src="images/car-bmw.jpg" alt="Executive Prestige Limousines" loading="lazy" width="800" height="533">
+              <span class="col-tag">Executive Atelier</span>
+            </div>
+            <div class="col-body">
+              <h4>Prestige Executive Saloons</h4>
+              <p>Extended wheelbases, recline lounge seating, rear champagne consoles, and whisper-silent acoustic glass.</p>
+              <div class="col-foot">
+                <span>6 Editions Available</span>
+                <a href="#best-sellers" class="link-arrow">View Collection <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Collection 4: Electric Avant-Garde -->
+          <article class="collection-card reveal">
+            <div class="col-img">
+              <img src="images/car-electric.jpg" alt="Electric Avant-Garde Collection" loading="lazy" width="800" height="450">
+              <span class="col-tag">Electric Avant-Garde</span>
+            </div>
+            <div class="col-body">
+              <h4>Zero-Emission Super-Salons</h4>
+              <p>800-volt high-speed architecture, instantaneous all-wheel torque, and future-forward aerodynamic silhouettes.</p>
+              <div class="col-foot">
+                <span>3 Editions Available</span>
+                <a href="#best-sellers" class="link-arrow">View Collection <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       8. FOOTER (Dark luxury footer with showroom logo, links, categories, contact, social)
+       ======================================================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <!-- Stackly Brand & Description -->
+        <div class="foot-brand">
+          <a href="#home" class="logo logo-light" aria-label="Stackly Motors home">
+            <img src="images/logo.png" class="logo-img" alt="Stackly Motors logo" width="346" height="100">
+          </a>
+          <p class="foot-desc">
+            An elite private automotive atelier dedicated to world-class marques, authentic heritage, and exceptional driving journeys for the world's most discerning enthusiasts.
+          </p>
+          <div class="socials" aria-label="Social media channels">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4 4 20"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">About Us</a></li>
+            <li><a href="#categories">Cars</a></li>
+            <li><a href="#promotional">Services</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Car Categories -->
+        <div class="foot-col">
+          <h4>Car Categories</h4>
+          <ul>
+            <li><a href="#categories">Luxury Cars</a></li>
+            <li><a href="#categories">Sports Cars</a></li>
+            <li><a href="#categories">SUVs</a></li>
+            <li><a href="#categories">Sedans</a></li>
+            <li><a href="#categories">Electric Cars</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="foot-col">
+          <h4>Showroom &amp; Contact</h4>
+          <ul class="foot-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>42 Kensington High Street, London W8 4PT, UK</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <a href="tel:+442079460958">+44 20 7946 0958</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+              <a href="mailto:concierge@stacklymotors.com">concierge@stacklymotors.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span>Mon – Sat: 09:00 – 20:00<br>Sunday: By Appointment Only</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Foot Bottom -->
+      <div class="foot-bottom">
+        <span>© 2026 Stackly Motors Ltd. All rights reserved.</span>
+        <span>Crafted for those who demand the pinnacle of automotive excellence.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
